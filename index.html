@@ -14,26 +14,30 @@
 
 <body class="bg-light">
 
-    <nav class="navbar navbar-light bg-white border-bottom">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <i class="fa-brands fa-instagram fa-lg"></i>
                 <span class="h5 mb-0 ms-2 align-middle">Instagram</span>
             </a>
-
-            <div class="d-flex">
-                <button class="btn btn-success btn-sm me-3" data-bs-toggle="modal" data-bs-target="#newPostModal">New Post</button>
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button"
-                        id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fa-solid fa-gear"></i>
-                    </button>
-                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Perfil</a>
-                        <a class="dropdown-item" href="#">Accesibilidad</a>
-                        <a class="dropdown-item" href="#">Privacidad y datos</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item text-danger" href="#">Log out</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavContent" aria-controls="navbarNavContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavContent">
+                <div class="d-flex ms-auto align-items-center">
+                    <button class="btn btn-success btn-sm me-3" data-bs-toggle="modal" data-bs-target="#newPostModal">New Post</button>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle btn-sm" type="button"
+                            id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-gear"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Perfil</a>
+                            <a class="dropdown-item" href="#">Accesibilidad</a>
+                            <a class="dropdown-item" href="#">Privacidad y datos</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item text-danger" href="#">Log out</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -59,7 +63,7 @@
         <div class="tab-content" id="pills-tabContent">
             
             <div class="tab-pane fade" id="pills-feed" role="tabpanel" aria-labelledby="pills-feed-tab">
-                <div class="card w-50 mx-auto mb-4">
+                <div class="card w-100 w-md-50 mx-auto mb-4">
                     <div class="card-header bg-white d-flex justify-content-between align-items-center">
                         <h5 class="mb-0">Primera foto</h5>
                         <span>01/01</span>
@@ -70,7 +74,7 @@
                         <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, quo nostrum ullam modi officia non cumque fugit corrupti dolor facere asperiores fuga exercitationem repellat ex? Ipsa numquam aliquam tempora quas.</p>
                     </div>
                 </div>
-                 <div class="card w-50 mx-auto mb-4">
+                 <div class="card w-100 w-md-50 mx-auto mb-4">
                      <div class="card-header bg-white d-flex justify-content-between align-items-center">
                         <h5 class="mb-0">Segunda foto</h5>
                         <span>02/01</span>
@@ -85,24 +89,22 @@
 
             <div class="tab-pane fade show active" id="pills-grid" role="tabpanel" aria-labelledby="pills-grid-tab">
                 <div class="row">
-                    <div class="col-4 p-1">
+                    <div class="col-12 col-md-6 col-lg-4 p-1">
                         <img src="https://picsum.photos/600/600?random=1" class="img-fluid" alt="Imagen 1">
                     </div>
-                    <div class="col-4 p-1">
+                    <div class="col-12 col-md-6 col-lg-4 p-1">
                         <img src="https://picsum.photos/600/600?random=2" class="img-fluid" alt="Imagen 2">
                     </div>
-                    <div class="col-4 p-1">
+                    <div class="col-12 col-md-6 col-lg-4 p-1">
                         <img src="https://picsum.photos/600/600?random=3" class="img-fluid" alt="Imagen 3">
                     </div>
-                </div>
-                 <div class="row">
-                    <div class="col-4 p-1">
+                    <div class="col-12 col-md-6 col-lg-4 p-1">
                         <img src="https://picsum.photos/600/600?random=4" class="img-fluid" alt="Imagen 4">
                     </div>
-                    <div class="col-4 p-1">
+                    <div class="col-12 col-md-6 col-lg-4 p-1">
                         <img src="https://picsum.photos/600/600?random=5" class="img-fluid" alt="Imagen 5">
                     </div>
-                    <div class="col-4 p-1">
+                    <div class="col-12 col-md-6 col-lg-4 p-1">
                         <img src="https://picsum.photos/600/600?random=6" class="img-fluid" alt="Imagen 6">
                     </div>
                 </div>
@@ -124,19 +126,21 @@
                             <textarea class="form-control" id="post-caption" rows="3"></textarea>
                         </div>
                         <div class="mb-3">
-                            <label for="post-image" class="form-label">
-                                <button type="button"> 
+                            <label for="post-image-upload" class="form-label me-2">
+                                <button type="button" class="btn btn-outline-secondary"> 
                                     <i class="fa-solid fa-image p-1"></i>
                                 </button>
                             </label>
-                            <label for="post-image" class="form-label">
-                                <button type="button"> 
+                            <label for="post-location-add" class="form-label">
+                                <button type="button" class="btn btn-outline-secondary"> 
                                     <i class="fa-solid fa-location-dot p-1"></i>
                                 </button>
                             </label>
+                        </div>
                     </form>
                 </div>
                 <div class="modal-footer">
+
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
                     <button type="button" class="btn btn-success">Publicar</button>
                 </div>
